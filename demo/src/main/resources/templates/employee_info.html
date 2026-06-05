@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="employee_info.css">
+    <title>社員情報一覧</title>
+</head>
+
+<body>
+    <header>
+        <div id="header" class="header-area">
+            <div class="menu-button flex-child">
+                <button>
+                    メニュー
+                </button>
+            </div>
+            <span class="header-spacer"></span>
+            <div class="user-label flex-child">
+                橋本将馬
+            </div>
+            <div class="logout-button flex-child">
+                <button>
+                    ログアウト
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="main-area">
+        <div class="search-area">
+            <div class="search-label">
+                名前
+            </div>
+            <div class="search-input-area">
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="search-button-area">
+                <button>
+                    検索
+                </button>
+            </div>
+        </div>
+
+        <div class="table-area">
+            <table class="employee-info-table">
+                <thead>
+                    <tr>
+                        <th>社員番号</th>
+                        <th>姓</th>
+                        <th>名</th>
+                        <th>年齢</th>
+                        <th>性別</th>
+                        <th>住所</th>
+                        <th>入社年月日</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <script>
+                        for (var i = 1; i <= 20; i++) {
+                            document.write('<tr>');
+                            document.write('<td>' + ('000' + i).slice(-4) + '</td>');
+                            document.write('<td>サンプル' + i + '</td>');
+                            document.write('<td>テスト' + i + '</td>');
+                            document.write('<td>' + (i + 20) + '</td>');
+                            document.write('<td>男</td>');
+                            document.write('<td>東京都墨田区</td>');
+                            document.write('<td>yyyy/mm/dd</td>');
+                            document.write('</tr>');
+                        }
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-area">
+            <span class="footer-spacer"></span>
+            <div class="back-button flex-child">
+                <button>
+                    戻る
+                </button>
+            </div>
+            <div class="create-button flex-child">
+                <button>
+                    新規登録
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
